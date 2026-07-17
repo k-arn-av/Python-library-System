@@ -14,7 +14,7 @@ def main():
     if system.login("232xB"):
 
         Lilo=Book("Lilo","XY","223")
-        active_user: users=system.currentUser
+        active_user: users=system.currentuser
         active_user.adds_book(Lilo)
 
         active_user.library_access.active_book = Lilo
@@ -23,7 +23,7 @@ def main():
         active_user.turns_page()
         
         print("\n Testing Account Deletion ---")
-        system.delete_account()
+        system.deleteAccount()
 
     print("\n SYSTEM SIMULATOR SHUTDOWN \n")
 
