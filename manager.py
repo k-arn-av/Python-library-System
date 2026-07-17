@@ -1,6 +1,4 @@
-from library import Library
-from library import Book
-import users
+from users import users
 
 class Manager:
     def __init__(self):
@@ -16,7 +14,7 @@ class Manager:
             self.all_users[userID]=new_user# key id stores all user attributes, {key, object}
             return True
     
-    def login(self, username:str, userID:str):
+    def login(self, userID:str):
         if userID not in self.all_users:
             print("Id doesnt exist, create a new one")
             return False
@@ -30,9 +28,12 @@ class Manager:
             return True
         else:
             print("nobody logged in")
+            return False
 
     def deleteAccount(self):
-        
+        self.all_users.pop(self.currentUser.userID,None)  
+        print("Successfully deleted account")  
+
         
 
     
